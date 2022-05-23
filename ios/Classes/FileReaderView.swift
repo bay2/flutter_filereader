@@ -48,14 +48,16 @@ class FileReaderView: NSObject,FlutterPlatformView {
     
     func openFile(filePath:String)  {
         
-        let url = URL.init(fileURLWithPath: filePath)
+        let url = NSURL(fileURLWithPath: filePath);
         
-        if #available(iOS 9.0, *) {
-            _webView?.loadFileURL(url, allowingReadAccessTo: url)
-        } else {
-            let request = URLRequest.init(url: url)
-            _webView?.load(request)
-        }
+        _webView?.load(url: url);
+        
+//        if #available(iOS 9.0, *) {
+//            _webView?.loadFileURL(url, allowingReadAccessTo: url)
+//        } else {
+//            let request = URLRequest.init(url: url)
+//            _webView?.load(request)
+//        }
        
     }
     
