@@ -51,7 +51,7 @@ class FileReaderWKWebView : UIView, QLPreviewControllerDataSource, QLPreviewCont
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        preview?.frame = self.bounds;
+        preview?.frame = CGRect(x: 5, y: 0, width: self.bounds.size.width - 5, height: self.bounds.height);
     }
     
 
@@ -66,7 +66,7 @@ class FileReaderWKWebView : UIView, QLPreviewControllerDataSource, QLPreviewCont
 
         self.addSubview(preview!);
         
-        preview?.frame = self.bounds;
+//        preview?.frame = self.bounds;
         
     }
     
