@@ -6,10 +6,8 @@ import UIKit
 let supportFileType = ["docx","doc","xlsx","xls","pptx","ppt","pdf","txt","jpg","jpeg","png"]
 
 public func isSupportOpen(fileType:String) -> Bool {
-    if supportFileType.contains(fileType.lowercased()) {
-        return true
-    }
-    return false
+
+    return true
 }
 
 public func fileType(filePath:String?) -> String {
